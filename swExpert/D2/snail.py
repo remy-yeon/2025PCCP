@@ -17,12 +17,12 @@ def make_snail(n):
         for r in range(top, bottom + 1):
             grid[r][right] = num
             num += 1
-        right -= 1
-        if left > right:
+        right -= 1 # 여기서 틀림 
+        if left > right: #계속 이 조건의 통일성을 모르네 
             break
 
         # 3) 아래쪽 줄 (오 → 왼)
-        for c in range(right, left - 1, -1):
+        for c in range(right, left - 1, -1): #여기서 left +1 이 아니라 left-1인데 잘못 품 
             grid[bottom][c] = num
             num += 1
         bottom -= 1
@@ -46,5 +46,5 @@ for tc in range(1, T + 1):
     grid = make_snail(n)
 
     print(f"#{tc}")
-    for row in grid:
+    for row in grid: #한번더 for문 사용해서 출력하는거 잊지말기 
         print(*row)

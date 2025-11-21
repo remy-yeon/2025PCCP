@@ -1,13 +1,11 @@
 def solve():
     N = int(input())
     #방향 인덱스 변수 초기화 
-    top = 0
-    left = 0
-    right = N-1
-    bottom = N-1
+    top = 0, left = 0
+    right = N-1, bottom = N-1
     
-    grid = [[-1]*N] #차이:이건 1차원 배열  1*N과 같음 
-    num = 0 #num은 저장되는 값이므로 문제 조건에 맞게 1로 초기화해야함 
+    # grid = [[-1]*N] #차이:이건 1차원 배열  1*N과 같음 
+    # num = 0 #num은 저장되는 값이므로 문제 조건에 맞게 1로 초기화해야함 
     row, col = 0, 0 
     
     #N제곱을 도는 이중 반복문 
